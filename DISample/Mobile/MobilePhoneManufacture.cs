@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DISample.Mobile
+﻿namespace DISample.Mobile
 {
-    enum MobilePhoneManufacture
+    internal enum MobilePhoneManufacture
     {
         ASUS,
         SAMSUNG,

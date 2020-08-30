@@ -1,15 +1,11 @@
-﻿using DISample.Battery;
-using DISample.Battery.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DISample.Battery.Interfaces;
 
 namespace DISample.Mobile
 {
-    abstract class MobilePhone
+    internal abstract class MobilePhone
     {
         public MobilePhoneManufacture Manufacture { get; }
-        public IBattery Battery { get;}
+        public IBattery Battery { get; }
 
         public MobilePhone(IBattery battery, MobilePhoneManufacture manufacture)
         {

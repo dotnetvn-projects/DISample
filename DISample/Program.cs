@@ -6,13 +6,12 @@ using System;
 
 namespace DISample
 {
-    class Program
+    internal class Program
     {
-        static IDIContainer _dIContainer = RegisterDI();
+        private static IDIContainer _dIContainer = RegisterDI();
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
             MobilePhone phone = new AsusPhone(new SamsungBattery());
             phone.TryReplaceBattery();
 
@@ -32,7 +31,7 @@ namespace DISample
             //phone.TryReplaceBattery();
         }
 
-        static IDIContainer RegisterDI()
+        private static IDIContainer RegisterDI()
         {
             IDIContainer container = new MyDIContainer();
             container.Register<ISamsungBattery, SamsungBattery>();

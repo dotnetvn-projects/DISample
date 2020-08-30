@@ -3,7 +3,7 @@ using DISample.Mobile;
 
 namespace DISample.Battery
 {
-    class SamsungBattery : ISamsungBattery
+    internal class SamsungBattery : ISamsungBattery
     {
         public BatteryInfo BatteryInfo { get; set; }
 

@@ -1,14 +1,13 @@
-﻿using DISample.Battery;
-using DISample.Battery.Interfaces;
+﻿using DISample.Battery.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DISample.Mobile
 {
-    class AsusPhone : MobilePhone
+    internal class AsusPhone : MobilePhone
     {
-        public AsusPhone(IBattery battery) : base(battery, MobilePhoneManufacture.ASUS) { }
+        public AsusPhone(IBattery battery) : base(battery, MobilePhoneManufacture.ASUS)
+        {
+        }
 
         public override void TryReplaceBattery()
         {

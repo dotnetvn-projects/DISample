@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DISample.Battery
+﻿namespace DISample.Battery
 {
-    class BatteryInfo
+    internal class BatteryInfo
     {
         public BatteryManufacture Manufacturer { get; set; }
         public string ChargeTime { get; set; }

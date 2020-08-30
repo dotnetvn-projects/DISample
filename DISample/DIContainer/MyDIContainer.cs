@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace DISample
 {
-    class MyDIContainer : IDIContainer
+    internal class MyDIContainer : IDIContainer
     {
-        Dictionary<Type, Func<object>> registrations = new Dictionary<Type, Func<object>>();
+        private Dictionary<Type, Func<object>> registrations = new Dictionary<Type, Func<object>>();
 
         public void Register<TService, TImpl>() where TImpl : TService
         {
@@ -47,8 +47,8 @@ namespace DISample
             {
                 return CreateInstance(serviceType);
             }
-            
-           throw new InvalidOperationException("No registration for " + serviceType);
+
+            throw new InvalidOperationException("No registration for " + serviceType);
         }
 
         private object CreateInstance(Type implementationType)
