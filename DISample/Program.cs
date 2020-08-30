@@ -12,15 +12,7 @@ namespace DISample
 
         private static void Main(string[] args)
         {
-            MobilePhone phone = new AsusPhone(new SamsungBattery());
-            phone.TryReplaceBattery();
-
-            Console.WriteLine(" ");
-
-            phone = new IPhoneX(new SamsungBattery());
-            phone.TryReplaceBattery();
-
-            //IBattery battery = _dIContainer.Resolve<ISamsungBattery>();
+            //IBattery battery = new SamsungBattery();
 
             //MobilePhone phone = new AsusPhone(battery);
             //phone.TryReplaceBattery();
@@ -29,6 +21,16 @@ namespace DISample
 
             //phone = new IPhoneX(battery);
             //phone.TryReplaceBattery();
+
+            IBattery battery = _dIContainer.Resolve<ISamsungBattery>();
+
+            MobilePhone phone = new AsusPhone(battery);
+            phone.TryReplaceBattery();
+
+            Console.WriteLine(" ");
+
+            phone = new IPhoneX(battery);
+            phone.TryReplaceBattery();
         }
 
         private static IDIContainer RegisterDI()
